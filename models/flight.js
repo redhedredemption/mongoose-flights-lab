@@ -11,7 +11,7 @@ const flightSchema = new Schema({
       type: String,
       enum: ['AUS','DFW','DEN','LAX','SAN']
     },
-    flightNo: 
+    flightNo: {},
     nowShowing: Boolean
   }, {
     timestamps: true
