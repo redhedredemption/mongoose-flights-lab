@@ -2,6 +2,15 @@ const mongoose = require("mongoose")
 
 const Schema = mongoose.Schema;
 
+const destinationsSchema = new Schema({
+  airport: {
+    type: String,
+  },
+  arrival: {
+    type: Date
+  }
+})
+
 const flightSchema = new Schema({
   airline: {
     type: String,
@@ -20,15 +29,16 @@ const flightSchema = new Schema({
   },
   departs: {
     type: Date,
-    default: function() {
+    default: function () {
       const today = new Date();
       const inOneYear = today.getFullYear() + 1
       today.setFullYear(inOneYear)
       return today;
-    }
+    },
+    destinations: [destinationsSchema]
   }
-  
 },
+
 );
 
 
