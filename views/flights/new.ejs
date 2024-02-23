@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/stylesheets/style.css" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <nav>
+        <ul class="navbar">
+            <a href="/">HOME</a>
+            <a href="/flights/">ALL FLIGHTS</a>
+        </ul>
+    </nav>
+    <section id="header">
+        <h1>MONGOOSE FLIGHTS</h1>
+    </section>
+    <title>NEW FLIGHTS</title>
+</head>
+
+<body>
+    <h2>Enter a New flight</h2>
+    <form action="/flights" method="POST">
+        <label>Airline:
+            <input type="text" name="airline">
+        </label><br>
+
+        <label>Airport:
+            <select name="airport">
+                <option value="AUS">AUS</option>
+                <option value="DFW">DFW</option>
+                <option value="DEN" selected>DEN</option>
+                <option value="LAX">LAX</option>
+                <option value="SAN">SAN</option>
+            </select>
+        </label><br>
+        <label>Flight Number:
+            <input type="number" name="flightNo">
+        </label><br>
+        <label>Departs:
+            <input type="date" name="departs">
+            <button type="submit">Add Flight</button>
+    </form>
+</body>
+
+</html>
